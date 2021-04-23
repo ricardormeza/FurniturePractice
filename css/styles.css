@@ -1,0 +1,161 @@
+:root{
+    --main-bg-color:#fbebe3;
+    --bg-color: #e3c7b8;
+    --btn-color:#de926d;
+    --gris-color:#bccbe2;
+    --cafe-color: #aca29d;
+    --gris1-color:#cccccc;
+    --gris-oscuro:#35221d;
+    --naranja-color:#f0c7b1;
+    --azul-color: #778291;
+    --linea-orange:#a63a15;
+    --color-negro:#000000;
+}
+
+/* Globales */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+.contenedor {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--main-bg-color);
+    margin-top: 5rem;
+}
+h1,h2,h3{
+    font-family: sans-serif;
+    font-weight: 900;
+    color: var(--color-negro);
+    text-align: center;
+    margin: 0;
+    padding:0;
+}
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 3.6rem;
+}
+h3{
+    font-size: 3rem;
+}
+
+/* bg main*/
+body{
+    background-color: var(--bg-color);
+}
+.header{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 6rem;
+    
+}
+.logo{
+    display: flex;
+    align-self: center;
+}
+.header .logo a{
+    font-size: 2rem;
+    color: var(--color-negro);
+    text-decoration: none;
+    align-items: center;
+}
+.header .navegacion-principal{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 6rem;
+    align-items: center;
+}
+.navegacion-principal a{
+    text-decoration: none;
+    color: var(--color-negro);
+    font-size: 1.8rem;
+}
+.main{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas:    "principal segunda tercera"
+                            "principal segunda-1 tercera_1"
+                            "principal segunda-1 tercera_1";
+    gap: 2rem;
+    margin-top: 3rem;
+}
+.main .principal {
+    grid-column-start: principal;
+    grid-column-end: principal;
+    grid-row-start: principal;
+    grid-row-end: principal;
+}
+.principal{
+    margin: 3rem;
+    padding: 10rem;
+}
+.principal h1{
+    width: 80%;
+    font-weight: 300;
+}
+.principal h1,h2{
+    text-align: left;
+    font-size: 5rem;
+
+}
+.principal h2{
+    margin-bottom: 3rem;
+}
+.principal p{
+    font-size: 2rem;
+}
+.principal .btn{
+    display: inline-block;
+    padding: 15px 32px;
+    background-color: var(--btn-color);
+    color: white;
+    border-radius: 15px;
+    border: none;
+    text-decoration: none;
+}
+.principal .btn:hover{
+    cursor: pointer;
+}
+
+.sillaGris img{
+    margin-top: 8rem;
+    float: right;
+    background-color: var(--azul-color);
+    height: 250px;
+    
+}
+.segunda{
+    grid-column-start: segunda-1;
+    grid-column-end: segunda-1;
+    grid-row-start: segunda-1;
+    grid-row-end: segunda-1;
+    background-color: var(--btn-color);
+    float: center;
+}
+.segunda .textoInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+
+.tercera{
+    grid-column-start: tercera;
+    grid-column-end: tercera;
+    background-color: var(--gris-color);
+    
+}
+.tercera .lampara_1{
+    display: flex;
+    flex-direction: column;
+    grid-column-start: tercera_1;
+    grid-column-end: tercera_1;
+    
+}
